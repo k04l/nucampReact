@@ -12,5 +12,5 @@ export const store = configureStore({
     comments: commentsReducer,
     partners: partnersReducer,
     promotions: promotionsReducer
-  },
+  }
 });
