@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Navbar, NavbarBrand, Collapse, NavbarToggler, Nav, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import NucampLogo from '../app/assets/img/logo.png';
+import UserLoginForm from '../features/user/UserLoginForm';
 
 
 
@@ -17,7 +18,7 @@ const Header = () => {
         <NavbarToggler onClick={() => setMenuOpen(!menuOpen)} />
         <Collapse isOpen={menuOpen} navbar>
             <Nav className='ms-auto' navbar>
-                ...the code inside the <Nav></Nav> tags...
+                <Nav></Nav>
          
                 <Nav className='ms-auto' navbar>
                     <NavItem>
@@ -37,11 +38,12 @@ const Header = () => {
                     </NavItem>
                     <NavItem>
                         <NavLink className='nav-link' to='/contact'>
-                            <i className='fa fa-address-card fa-lg' /> Contract
+                            <i className='fa fa-address-card fa-lg' /> Contact
                         </NavLink>
                     </NavItem>
                 </Nav>
             </Nav>
+            <UserLoginForm />
         </Collapse>
     </Navbar>
     );
